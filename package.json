@@ -1,0 +1,27 @@
+{
+  "name": "nodejsDemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pq1949/nodejsDemo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pq1949/nodejsDemo/issues"
+  },
+  "homepage": "https://github.com/pq1949/nodejsDemo#readme",
+  "dependencies": {
+    "moment": "^2.22.2",
+    "mongoose": "^5.2.8",
+    "mysql": "^2.16.0",
+    "puppeteer": "^1.7.0",
+    "redis": "^2.8.0"
+  }
+}
