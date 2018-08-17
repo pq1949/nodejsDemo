@@ -4,18 +4,7 @@ const CREDS = require('./creds')
 const User = require('./models/user')
 const moment =require('moment')
 
-async function screenshot () {
-  const browser = await puppeteer.launch()
-  const page = await browser.newPage()
-  const option = {
-    path: 'github.png',
-    fullPage: true
-  }
-  await page.goto('https://github.com/trending')
-  await page.screenshot(option)
 
-  browser.close()
-}
 
 async function logUserEmail (listLength, page) {
   // const LIST_USERNAME_SELECTOR = '#user_search_results > div.user-list > div:nth-child(1) > div.d-flex > div > a';
@@ -124,6 +113,7 @@ async function email () {
     await logUserEmail(listLength, page)
   }
 
+  browser.close()
 }
 
 
@@ -137,8 +127,6 @@ function upsertUser(userObj) {
     console.log('%j insert info : %j',userObj, result)
   });
 }
-
-//screenshot()
 
 email()
 
