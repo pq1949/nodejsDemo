@@ -18,7 +18,7 @@ app.all("*", function(req, res, next) {
   /*让options请求快速返回*/ else next();
 });
 
-app.get(`/v${VERSION}/answer/:qid/:exam_id/:sdp_app_id`, function(req, res) {
+app.get(`/v${VERSION}/answer/:qid(/:exam_id)(/:sdp_app_id)`, function(req, res) {
   actions.findAnswer(req.params, data => {
     res.send(data);
   });
