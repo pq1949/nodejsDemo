@@ -18,8 +18,8 @@ app.all("*", function(req, res, next) {
   /*让options请求快速返回*/ else next();
 });
 
-app.get(`/v${VERSION}/answer/:qid(/:exam_id)(/:sdp_app_id)`, function(req, res) {
-  actions.findAnswer(req.params, data => {
+app.get(`/v${VERSION}/answer`, function(req, res) {
+  actions.findAnswer(req.query, data => {
     res.send(data);
   });
 });
@@ -47,5 +47,5 @@ app.post(`/v${VERSION}/answer`, function(req, res) {
 // api https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagescreenshotoptions
 
 http.listen(9528, function() {
-  console.log("listening on *:9527");
+  console.log("listening on *:9528");
 });

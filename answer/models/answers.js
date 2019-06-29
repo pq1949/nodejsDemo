@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const DB_URL = 'mongodb://127.0.0.1:27017/testdb';
+const DB_URL = 'mongodb://140.143.99.193:27017/testdb';
 const opts = {
   user: 'testuser',
   pass: '123456',
