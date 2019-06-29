@@ -46,6 +46,6 @@ app.post(`/v${VERSION}/answer`, function(req, res) {
 
 // api https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagescreenshotoptions
 
-http.listen(9527, function() {
+http.listen(9528, function() {
   console.log("listening on *:9527");
 });
