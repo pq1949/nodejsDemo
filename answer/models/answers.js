@@ -18,6 +18,7 @@ if (mongoose.connection.readyState == 0) {
 let userSchema = new mongoose.Schema({
     qid: String,
     exam_id: String,
+    exam_title: String,
     sdp_app_id: String,
     title: String,
     corrects: Array,
